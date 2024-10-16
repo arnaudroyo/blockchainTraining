@@ -25,6 +25,10 @@ import java.util.Collections
   */
 class EthereumWalletManager {
 
+  private val alchemyURL: String = "https://eth-sepolia.g.alchemy.com/v2/XXX"
+  private val web3: Web3j = Web3j.build(new HttpService(alchemyURL))
+  private val gasProvider = new DefaultGasProvider()
+
   /**
     * Creates a new Ethereum wallet.
     *
